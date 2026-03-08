@@ -3,8 +3,7 @@ const portfolio = {
   stats: [
     { value: '7+', label: 'CVE / 취약점 리포트' },
     { value: '2017~', label: '보안 실무·연구 경험' },
-    { value: '3+', label: '핵심 영역 · 웹/게임/리버싱' },
-    { value: '50+', label: '취약점 제보 경험' },
+    { value: '3+', label: '핵심 영역 · 리버싱/게임/웹' },
   ],
   skills: [
     {
@@ -143,6 +142,7 @@ const portfolio = {
     { title: 'CVE-2021-45002', description: '공개 보고 이력' },
   ],
   awards: [
+    { title: 'CTF Participation', meta: '' },
     { title: '2022 HACKTHEON SEJONG 사이버보안 경진대회', meta: '과학기술정책연구원장상 (8위상)' },
     { title: '가톨릭대학교 캡스톤 경진대회', meta: '장려상' },
     { title: '2017 KITRI 사이버가디언즈 화이트해커리그', meta: '팀워크상 (4위상)' },
