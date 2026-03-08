@@ -143,7 +143,7 @@ const portfolio = {
   ],
   ctf: [
     { title: '2025 AI 해킹방어대회', meta: '형의 의지 · 14th' },
-    { title: '2022 Codegate 본선', meta: 'CAT-Security · 6th' },
+    { title: '2022 Codegate Finals', meta: 'CAT-Security · 6th' },
     { title: "2021 SSTF Hacker's Playground", meta: 'CAT-Security · 9th' },
     { title: '2018 SCTF Finals', meta: 'Ryuuu' },
     { title: '2018 Codegate Finals', meta: 'CAT-Security · 7th' },
