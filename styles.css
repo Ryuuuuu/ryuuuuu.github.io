@@ -229,7 +229,7 @@ a {
 
 .hero-grid {
   grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
-  gap: 28px;
+  gap: 17px;
   align-items: stretch;
 }
 
@@ -251,7 +251,7 @@ a {
 .hero-copy,
 .hero-card,
 .contact-card {
-  padding: 34px;
+  padding: 26px;
 }
 
 .eyebrow {
@@ -435,11 +435,8 @@ a {
 .profile-image {
   width: 108px;
   height: auto;
-  aspect-ratio: 354 / 472;
-  object-fit: cover;
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.16);
-  overflow: hidden;
 }
 
 .profile-role {
@@ -510,7 +507,7 @@ a {
 .timeline-item {
   position: relative;
   overflow: hidden;
-  padding: 28px;
+  padding: 20px;
 }
 
 .about-card h3,
@@ -531,8 +528,8 @@ a {
 
 .skills-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 20px;
+  gap: 11px;
+  margin-bottom: 12px;
 }
 
 .skill-top,
@@ -565,13 +562,13 @@ a {
 
 .timeline {
   display: grid;
-  gap: 18px;
+  gap: 11px;
 }
 
 .timeline-item {
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr);
-  gap: 26px;
+  gap: 16px;
 }
 
 .timeline-date {
@@ -647,13 +644,13 @@ a {
 
 .contact-card {
   grid-template-columns: minmax(0, 1.4fr) auto;
-  gap: 24px;
+  gap: 14px;
   align-items: center;
 }
 
 .contact-actions {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
