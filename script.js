@@ -1,5 +1,5 @@
 const portfolio = {
-  heroTags: ['Smilegate Holdings', 'Security Automation', 'Web / Game Pentest', 'Reverse Engineering', 'DevSecOps'],
+  heroTags: ['Pwnable', 'Security Automation', 'Web / Game Pentest', 'Reverse Engineering', 'DevSecOps'],
   stats: [
     { value: '7+', label: 'CVE / 취약점 리포트' },
     { value: '2017~', label: '보안 실무·연구 경험' },
@@ -11,28 +11,15 @@ const portfolio = {
       title: 'Security Domains',
       subtitle: '핵심 역량',
       description: '실무에서 반복적으로 다뤄온 보안 분야입니다.',
-      items: ['Web Hacking', 'Game Hacking', 'Mobile Hacking', 'Reverse Engineering', 'System Hacking', 'Security Automation'],
+      items: ['Web Hacking', 'Game Hacking', 'Mobile Hacking', 'Reverse Engineering', 'System Hacking', 'Security Automation', 'IoT Hacking', 'DevSecOps', 'Attack Surface Management'],
     },
     {
       title: 'Engineering Stack',
       subtitle: '구현 경험',
       description: '자동화 및 도구 개발에 주로 사용한 언어와 프레임워크입니다.',
-      items: ['Python', 'Django', 'Flask', 'JavaScript', 'C / C++', 'PHP', 'Shell Script', 'Node.js'],
-    },
-    {
-      title: 'Assessment Techniques',
-      subtitle: '주요 기법',
-      description: '취약점 점검과 분석 과정에서 반복적으로 활용한 기술입니다.',
-      items: ['XSS', 'SQL Injection', 'SSRF', 'SSTI', 'IDOR', 'Heap / Stack', 'Hooking', 'Frida'],
-    },
-    {
-      title: 'Workflow & Delivery',
-      subtitle: '운영 방식',
-      description: '분석 결과를 실제 프로세스로 연결하기 위한 운영 경험입니다.',
-      items: ['GitLab', 'DevSecOps', 'Asset Discovery', 'Nmap', 'ZAP', 'Metasploit', 'Nuclei', 'Project Collaboration'],
+      items: ['Python', 'Django', 'Flask', 'JavaScript', 'Vue.js', 'Electron', 'ELK', 'C / C++', 'PHP', 'Shell Script', 'Node.js'],
     },
   ],
-  tools: ['Burp Suite', 'IDA', 'OllyDbg', 'x64dbg', 'GDB', 'Wireshark', 'Frida', 'Volatility', 'Nmap', 'AFL++', 'Git', 'VS Code', 'curl', 'aws-cli'],
   career: [
     {
       date: '2023.01 ~ 현재',
@@ -162,11 +149,10 @@ const portfolio = {
     { title: '가톨릭대학교 프로그래밍 대회', meta: '동상 (3위상)' },
   ],
   background: [
-    { title: '한국정보보호학회 동계학술대회', meta: '논문 「PX4 Autopilot의 MAVLink 모듈에 대한 취약점 분석」 공동저자' },
-    { title: '가톨릭대학교 졸업', meta: '컴퓨터공학 전공 · GPA 3.2' },
     { title: '양천고등학교 졸업', meta: '2014.03 ~ 2017.02' },
     { title: 'KITRI BEST OF THE BEST', meta: '10기 취약점분석 트랙 수료' },
-    { title: '육군 병장 만기 전역', meta: '정보보호병' },
+    { title: '가톨릭대학교 졸업', meta: '컴퓨터공학 전공 · GPA 3.2' },
+    { title: '한국정보보호학회 동계학술대회', meta: '논문 「PX4 Autopilot의 MAVLink 모듈에 대한 취약점 분석」 공동저자' },
   ],
 };
 
@@ -210,8 +196,6 @@ function renderSkills() {
     root.appendChild(card);
   });
 
-  const toolCloud = $('#tool-cloud');
-  portfolio.tools.forEach((tool) => toolCloud.appendChild(create('span', '', tool)));
 }
 
 function renderTimeline(selector, items) {
