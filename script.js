@@ -142,17 +142,21 @@ const portfolio = {
     { title: 'CVE-2021-45002', description: '공개 보고 이력' },
   ],
   awards: [
-    { title: 'CTF Participation', meta: '' },
+    { title: '2018 Codegate Finals', meta: 'CAT-Security · 7th' },
+    { title: '2018 SCTF Finals', meta: 'Ryuuu' },
+    { title: "2021 SSTF Hacker's Playground", meta: 'CAT-Security · 9th' },
+    { title: '2022 Codegate 본선', meta: 'CAT-Security · 6th' },
+    { title: '2025 AI 해킹방어대회', meta: '형의 의지 · 14th' },
     { title: '2022 HACKTHEON SEJONG 사이버보안 경진대회', meta: '과학기술정책연구원장상 (8위상)' },
     { title: '가톨릭대학교 캡스톤 경진대회', meta: '장려상' },
     { title: '2017 KITRI 사이버가디언즈 화이트해커리그', meta: '팀워크상 (4위상)' },
     { title: '가톨릭대학교 프로그래밍 대회', meta: '동상 (3위상)' },
   ],
   background: [
-    { title: '양천고등학교 졸업', meta: '2014.03 ~ 2017.02' },
-    { title: 'KITRI BEST OF THE BEST', meta: '10기 취약점분석 트랙 수료' },
-    { title: '가톨릭대학교 졸업', meta: '컴퓨터공학 전공 · GPA 3.2' },
     { title: '한국정보보호학회 동계학술대회', meta: '논문 「PX4 Autopilot의 MAVLink 모듈에 대한 취약점 분석」 공동저자' },
+    { title: '가톨릭대학교 졸업', meta: '컴퓨터공학 전공' },
+    { title: 'KITRI BEST OF THE BEST', meta: '10기 취약점분석 트랙 수료' },
+    { title: '양천고등학교 졸업', meta: '2014.03 ~ 2017.02' },
   ],
 };
 
