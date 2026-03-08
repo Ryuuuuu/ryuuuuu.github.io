@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="류형호(Ryuuu)의 보안 포트폴리오. Offensive Security, Security Automation, Reverse Engineering, DevSecOps 경험을 담은 GitHub Pages 포트폴리오입니다."
+    />
+    <meta property="og:title" content="Ryuuu | Security Portfolio" />
+    <meta
+      property="og:description"
+      content="보안 자동화, 모의해킹, 리버싱, DevSecOps 경험을 정리한 류형호의 포트폴리오"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/33323678?v=4" />
+    <title>Ryuuu | Security Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+    <div class="progress-bar" aria-hidden="true">
+      <span id="scroll-progress"></span>
+    </div>
+    <div class="page-glow" aria-hidden="true"></div>
+    <div class="page-noise" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top">Ryuuu</a>
+        <nav class="site-nav" aria-label="주요 섹션">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#credentials">Credentials</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="button ghost" href="mailto:fbgudgh1@gmail.com">Contact</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">OFFENSIVE SECURITY · AUTOMATION · REVERSE ENGINEERING</p>
+            <h1>
+              공격자 관점의 분석과<br />
+              자동화로 보안성을 끌어올리는<br />
+              <span>류형호 · Ryuuu</span>
+            </h1>
+            <p class="hero-summary">
+              모의해킹, 취약점 점검, 보안 자동화, 리버싱 경험을 바탕으로 서비스의 실제 공격면을 분석하고,
+              재현 가능한 도구와 프로세스로 연결하는 보안 엔지니어입니다.
+            </p>
+            <div class="hero-terminal reveal" aria-label="보안 엔지니어링 포커스">
+              <div class="terminal-line">
+                <span class="terminal-label">FOCUS</span>
+                <span>Offensive Security · Automation · Reverse Engineering</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-label">STACK</span>
+                <span>Python · Frida · Django · ZAP · Nmap · Metasploit</span>
+              </div>
+              <div class="terminal-line">
+                <span class="terminal-label">VALUE</span>
+                <span>Attack surface analysis → repeatable tooling → security improvement</span>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects">대표 프로젝트 보기</a>
+              <a class="button secondary" href="https://github.com/Ryuuuuu" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+            <ul class="hero-tags" id="hero-tags"></ul>
+          </div>
+
+          <aside class="hero-card reveal" aria-label="프로필 요약 카드">
+            <div class="profile-head">
+              <img
+                src="https://avatars.githubusercontent.com/u/33323678?v=4"
+                alt="류형호 GitHub 프로필 이미지"
+                class="profile-image"
+              />
+              <div>
+                <p class="profile-role">Security Engineer</p>
+                <h2>Ryuuu</h2>
+                <p class="profile-location">Seoul · Korea</p>
+              </div>
+            </div>
+            <div class="stat-grid" id="hero-stats"></div>
+            <div class="quick-links">
+              <a href="mailto:fbgudgh1@gmail.com">Email</a>
+              <a href="https://github.com/Ryuuuuu" target="_blank" rel="noreferrer">GitHub</a>
+              <a href="https://ryuuv.tistory.com/" target="_blank" rel="noreferrer">Blog</a>
+              <a href="https://www.linkedin.com/in/%ED%98%95%ED%98%B8-%EB%A5%98-166399172/" target="_blank" rel="noreferrer">LinkedIn</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">ABOUT</p>
+            <h2>기술 분석 + 자동화 + 커뮤니케이션을 함께 가져가는 보안 실무</h2>
+            <p>
+              기존 이력서의 내용을 그대로 나열하지 않고, 실제 강점이 드러나도록 핵심 축으로 다시 정리했습니다.
+            </p>
+          </div>
+          <div class="about-grid" id="about-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">SKILLS</p>
+            <h2>공격 관점 분석부터 자동화 구현까지</h2>
+          </div>
+          <div class="skills-grid" id="skills-grid"></div>
+          <div class="tool-cloud reveal" id="tool-cloud"></div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">EXPERIENCE</p>
+            <h2>서비스 보안과 프로젝트 경험을 통해 쌓아온 흐름</h2>
+          </div>
+          <div class="timeline" id="experience-timeline"></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">PROJECTS</p>
+            <h2>실제 문제를 해결하기 위해 만든 보안 도구와 시스템</h2>
+          </div>
+          <div class="project-grid" id="project-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="credentials">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">CREDENTIALS</p>
+            <h2>보고서, 수상, 논문, 학력까지 한눈에</h2>
+          </div>
+          <div class="credentials-grid">
+            <article class="credential-panel reveal">
+              <div class="panel-head">
+                <h3>Vulnerability Reports</h3>
+                <span>2021</span>
+              </div>
+              <div class="credential-list" id="report-list"></div>
+            </article>
+            <article class="credential-panel reveal">
+              <div class="panel-head">
+                <h3>Awards</h3>
+                <span>Selected</span>
+              </div>
+              <div class="credential-list" id="award-list"></div>
+            </article>
+            <article class="credential-panel reveal">
+              <div class="panel-head">
+                <h3>Paper & Education</h3>
+                <span>Background</span>
+              </div>
+              <div class="credential-list" id="background-list"></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-card reveal">
+          <div>
+            <p class="eyebrow">CONTACT</p>
+            <h2>보안, 자동화, 공격 관점 분석이 필요한 팀과 연결되고 싶습니다.</h2>
+            <p>
+              이메일로 연락 주시면 가장 빠르게 확인합니다. GitHub와 블로그에도 작업 흔적과 학습 기록을 계속 남기고 있습니다.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:fbgudgh1@gmail.com">메일 보내기</a>
+            <a class="button secondary" href="https://github.com/Ryuuuuu" target="_blank" rel="noreferrer">GitHub 보기</a>
+            <a class="button ghost" href="https://ryuuv.tistory.com/" target="_blank" rel="noreferrer">Blog</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="current-year"></span> Ryuuu. Built for GitHub Pages.</p>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

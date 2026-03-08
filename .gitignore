@@ -1,0 +1,20 @@
+# OMX / local agent tooling
+.agents/
+.codex/
+.omx/
+AGENTS.md
+
+# Local editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local scratch / old placeholders
+test.html
+
+# Generic local env files
+.env
+.env.*
+*.local
+*.log
