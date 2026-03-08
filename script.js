@@ -142,11 +142,11 @@ const portfolio = {
     { title: 'CVE-2021-45002', description: '공개 보고 이력' },
   ],
   ctf: [
-    { title: '2018 Codegate Finals', meta: 'CAT-Security · 7th' },
-    { title: '2018 SCTF Finals', meta: 'Ryuuu' },
-    { title: "2021 SSTF Hacker's Playground", meta: 'CAT-Security · 9th' },
-    { title: '2022 Codegate 본선', meta: 'CAT-Security · 6th' },
     { title: '2025 AI 해킹방어대회', meta: '형의 의지 · 14th' },
+    { title: '2022 Codegate 본선', meta: 'CAT-Security · 6th' },
+    { title: "2021 SSTF Hacker's Playground", meta: 'CAT-Security · 9th' },
+    { title: '2018 SCTF Finals', meta: 'Ryuuu' },
+    { title: '2018 Codegate Finals', meta: 'CAT-Security · 7th' },
   ],
   awards: [
     { title: '2022 HACKTHEON SEJONG 사이버보안 경진대회', meta: '과학기술정책연구원장상 (8위상)' },
@@ -161,7 +161,7 @@ const portfolio = {
     { title: '양천고등학교 졸업', meta: '2014.03 ~ 2017.02' },
   ],
   presentations: [
-    { title: 'Smilegate x Nexon x NC Soft 게임보안 세미나', meta: '네트워크 기반 게임 보안 검수 도구 개발' },
+    { title: '2025 Smilegate x Nexon x NC Soft 게임보안 세미나', meta: '네트워크 기반 게임 보안 검수 도구 개발' },
   ],
 };
 
