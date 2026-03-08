@@ -350,6 +350,25 @@ a {
   font-size: 0.78rem;
 }
 
+.value-flow {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.flow-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
+  box-shadow: 0 0 14px rgba(56, 211, 255, 0.35);
+  flex: 0 0 auto;
+}
+
 .hero-actions {
   grid-template-columns: repeat(2, max-content);
   gap: 12px;
@@ -720,6 +739,10 @@ a {
   .terminal-line {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .value-flow {
+    gap: 8px;
   }
 
   .button {
