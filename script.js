@@ -6,23 +6,6 @@ const portfolio = {
     { value: '3+', label: '핵심 영역 · 웹/게임/리버싱' },
     { value: '50+', label: '취약점 제보 경험' },
   ],
-  about: [
-    {
-      title: '공격자 관점 분석',
-      description:
-        '웹, 게임, 모바일, 시스템을 넘나들며 실제 공격면을 분석하고 취약점 재현과 패치 방향까지 함께 고민합니다.',
-    },
-    {
-      title: '자동화 중심 개선',
-      description:
-        '반복 점검을 사람이 아닌 도구와 파이프라인으로 옮겨, 진단 속도와 재현성을 끌어올리는 데 강점이 있습니다.',
-    },
-    {
-      title: '연구와 전달력',
-      description:
-        '최신 보안 이슈와 기술 분석을 꾸준히 추적하고, 결과를 보고서·논문·프로젝트 형태로 구조화해 공유합니다.',
-    },
-  ],
   skills: [
     {
       title: 'Security Domains',
@@ -50,7 +33,7 @@ const portfolio = {
     },
   ],
   tools: ['Burp Suite', 'IDA', 'OllyDbg', 'x64dbg', 'GDB', 'Wireshark', 'Frida', 'Volatility', 'Nmap', 'AFL++', 'Git', 'VS Code', 'curl', 'aws-cli'],
-  experience: [
+  career: [
     {
       date: '2023.01 ~ 현재',
       company: 'Smilegate Holdings',
@@ -68,6 +51,16 @@ const portfolio = {
       summary: '게임 엔진별 취약점 점검 방안을 조사하고 리버싱/모바일 분석 기반의 검토를 진행했습니다.',
       points: ['게임 엔진 취약점 점검 방법론 검토', '모바일·리버싱 기반 분석 지원'],
     },
+    {
+      date: '2018.07 ~ 2018.08',
+      company: '한국정보기술연구원',
+      role: '화이트해커리그 보안 강사',
+      badge: '2개월',
+      summary: '사이버 가디언즈 프로그램에서 학생 대상 보안 강의를 진행했습니다.',
+      points: ['C 언어 기초', '리눅스 기초', '시스템 해킹 기초 강의'],
+    },
+  ],
+  experience: [
     {
       date: '2022.03 ~ 2022.09',
       company: 'NCSOFT (외주 프로젝트)',
@@ -93,14 +86,6 @@ const portfolio = {
       summary: '교내외 웹 취약점 진단, 침해사고 대응, 50건 이상의 취약점 제보를 진행했습니다.',
       points: ['학내망 침해사고 대응', '다수 취약점 제보', '보안 동아리/팀 활동 기반의 실전 경험 축적'],
     },
-    {
-      date: '2018.07 ~ 2018.08',
-      company: '한국정보기술연구원',
-      role: '화이트해커리그 보안 강사',
-      badge: '2개월',
-      summary: '사이버 가디언즈 프로그램에서 학생 대상 보안 강의를 진행했습니다.',
-      points: ['C 언어 기초', '리눅스 기초', '시스템 해킹 기초 강의'],
-    },
   ],
   projects: [
     {
@@ -119,7 +104,7 @@ const portfolio = {
       description:
         '로그인부터 페이지 수집, 자동 스캔까지 이어지는 웹 진단 자동화 솔루션을 개발했습니다.',
       points: ['메인 도메인·로그인 페이지 입력 기반 자동 점검', 'xnLinkFinder로 링크 수집', 'ZAP 기반 자동 로그인 및 스캔'],
-      tags: ['ZAP', 'Automation', 'Web Security'],
+      tags: ['Web Security', 'Automation', 'ZAP'],
     },
     {
       period: '2024.03 ~ 2024.11',
@@ -137,7 +122,7 @@ const portfolio = {
       description:
         '대역 기반 자산 식별부터 취약점 점검까지 자동으로 이어지는 스캔 코어를 구현했습니다.',
       points: ['Nmap 기반 자산 식별', 'Metasploit / Nuclei 활용 자동 점검', '스캔 코어 및 백엔드 구현'],
-      tags: ['Nmap', 'Metasploit', 'Nuclei', 'Backend'],
+      tags: ['Automation', 'Nmap', 'Metasploit', 'Nuclei'],
     },
     {
       period: '2021.08 ~ 2021.12',
@@ -155,7 +140,7 @@ const portfolio = {
       description:
         'IoT 장치와 연결되는 API 서버 및 웹 UI를 구현한 캡스톤 성격의 프로젝트입니다.',
       points: ['Django 기반 백엔드 개발', 'Arduino 요청 처리 API 서버 구현', '프론트엔드 UI 구현'],
-      tags: ['Django', 'IoT', 'Web'],
+      tags: ['IoT', 'Django', 'Web'],
     },
   ],
   reports: [
@@ -210,15 +195,6 @@ function renderHero() {
   });
 }
 
-function renderAbout() {
-  const root = $('#about-grid');
-  portfolio.about.forEach((item) => {
-    const card = create('article', 'about-card reveal');
-    card.append(create('h3', '', item.title), create('p', '', item.description));
-    root.appendChild(card);
-  });
-}
-
 function renderSkills() {
   const root = $('#skills-grid');
   portfolio.skills.forEach((skill) => {
@@ -238,9 +214,9 @@ function renderSkills() {
   portfolio.tools.forEach((tool) => toolCloud.appendChild(create('span', '', tool)));
 }
 
-function renderExperience() {
-  const root = $('#experience-timeline');
-  portfolio.experience.forEach((item) => {
+function renderTimeline(selector, items) {
+  const root = $(selector);
+  items.forEach((item) => {
     const wrapper = create('article', 'timeline-item reveal');
     const left = create('div');
     left.append(create('div', 'timeline-date', item.date), create('div', 'timeline-badge', item.badge));
@@ -257,6 +233,11 @@ function renderExperience() {
   });
 }
 
+function renderExperience() {
+  renderTimeline('#career-timeline', portfolio.career);
+  renderTimeline('#experience-timeline', portfolio.experience);
+}
+
 function renderProjects() {
   const root = $('#project-grid');
   portfolio.projects.forEach((project) => {
@@ -269,12 +250,10 @@ function renderProjects() {
     top.append(textWrap, create('span', '', project.period));
 
     const desc = create('p', '', project.description);
-    const bullets = create('ul', 'meta-list');
-    project.points.forEach((point) => bullets.appendChild(create('li', '', point)));
     const tags = create('div', 'project-tags');
     project.tags.forEach((tag) => tags.appendChild(create('span', '', tag)));
 
-    card.append(top, desc, bullets, tags);
+    card.append(top, desc, tags);
     root.appendChild(card);
   });
 }
@@ -404,7 +383,6 @@ function initYear() {
 }
 
 renderHero();
-renderAbout();
 renderSkills();
 renderExperience();
 renderProjects();
