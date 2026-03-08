@@ -1315,3 +1315,85 @@ body::before {
     font-size: clamp(1.9rem, 8vw, 2.8rem);
   }
 }
+
+
+/* ---- interaction polish ---- */
+.interactive-sheen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,0.10), transparent 36%),
+    radial-gradient(180px circle at var(--mx, 50%) var(--my, 50%), rgba(191,219,254,0.12), transparent 28%);
+  opacity: 0;
+  transition: opacity 0.28s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.interactive-sheen:hover::before,
+.interactive-sheen:focus-within::before {
+  opacity: 1;
+}
+
+.hero-copy > *,
+.hero-card > *,
+.skill-card > *,
+.project-card > *,
+.credential-panel > *,
+.timeline-item > *,
+.contact-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.button {
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(255,255,255,0.16), transparent 42%, transparent 58%, rgba(255,255,255,0.06));
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.button:hover {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.site-nav a,
+.quick-links a,
+.hero-tags li,
+.skill-list li,
+.project-tags span,
+.stat-item,
+.panel-item {
+  transition: transform 0.22s ease, background-color 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.quick-links a:hover,
+.hero-tags li:hover,
+.skill-list li:hover,
+.project-tags span:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.stat-item:hover,
+.panel-item:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interactive-sheen::before,
+  .button::after {
+    display: none;
+  }
+}

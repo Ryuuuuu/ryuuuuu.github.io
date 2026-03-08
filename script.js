@@ -377,6 +377,25 @@ function initYear() {
   $('#current-year').textContent = String(new Date().getFullYear());
 }
 
+
+function initInteractivePolish() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cards = document.querySelectorAll('.hero-copy, .hero-card, .skill-card, .project-card, .credential-panel, .timeline-item, .contact-card');
+
+  cards.forEach((card) => {
+    card.classList.add('interactive-sheen');
+    if (reduced) return;
+
+    card.addEventListener('pointermove', (event) => {
+      const rect = card.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width) * 100;
+      const y = ((event.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', `${x}%`);
+      card.style.setProperty('--my', `${y}%`);
+    });
+  });
+}
+
 renderHero();
 renderSkills();
 renderExperience();
@@ -389,3 +408,4 @@ initPointerGlow();
 initProjectTilt();
 initSmoothAnchors();
 initYear();
+initInteractivePolish();
